@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #4CAF50;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .greeting {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome!</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="showGreeting()">Submit</button>
+    <p id="greetingMessage" class="greeting"></p>
+  </div>
+
+  <script>
+    function showGreeting() {
+      var name = document.getElementById('nameInput').value;
+      var greetingMessage = document.getElementById('greetingMessage');
+      
+      if (name) {
+        greetingMessage.textContent = 'Hello, ' + name + '! Welcome to the web app!';
+      } else {
+        greetingMessage.textContent = 'Please enter your name.';
+      }
+    }
+  </script>
+
+</body>
+</html>
